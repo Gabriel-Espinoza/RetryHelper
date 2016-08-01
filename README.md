@@ -18,7 +18,7 @@ RetryHelper will throw the original exception if it fails for the maximum retrie
         int sleepMilliseconds = 500; //default is 100
         
         RetryHelper.Try(()=>{
-                doSomeWorkHere();
+                doSomeWork();
             }, maxTries, sleepMilliseconds);
         );
     }
