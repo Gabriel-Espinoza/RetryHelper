@@ -7,12 +7,14 @@ Gabo.RetryHelper is my first project and it's intended to provide help when you 
 RetryHelper will throw the original exception if it fails for the maximum retries, so you should always surround it by a try/catch clause.
 
 ### Basic Scenario
+```csharp
     var a = 1;
     RetryHelper.Try(() => {
         a++;
     });
-
+```
 ### Full Example
+```csharp
     try{
         int maxTries = 7; // default is 5
         int sleepMilliseconds = 500; //default is 100
@@ -27,3 +29,4 @@ RetryHelper will throw the original exception if it fails for the maximum retrie
         //here you can catch an exception that was thrown by doSomeWork() method if it was
         // thrown more times than the max of tries setted up.
     }
+```
